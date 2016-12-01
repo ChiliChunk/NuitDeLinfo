@@ -1,4 +1,4 @@
-function toggleSun() {
+function playMusic() {
 	var music = document.getElementById("music");
 	if (music.paused) {
 		music.play();
@@ -6,8 +6,9 @@ function toggleSun() {
     else {
 		music.pause();
 	}
-  document.getElementById("sun").classList.toggle("move");
 }
+
+function toggleSun() { document.getElementById("sun").classList.toggle("move"); playMusic();}
 
 var nbLeft, nbMiddle,nbRight = false;
 
@@ -19,18 +20,13 @@ function killNumberRight() { document.getElementById("number_right").className +
 
 function areTheyDown() {
 	if(nbLeft == true && nbMiddle == true && nbRight == true) {
-		window.setTimeout(function(){ window.location = "https://www.google.fr/"; },1000);
+		window.setTimeout(function(){ window.location = "https://www.google.fr/"; }, 1000);
 	}
 }
 
-function toRadians (angle) {
-	return angle * (Math.PI / 180);
-}
+function toRadians (angle) { return angle * (Math.PI / 180); }
 
-function mouseMouve(event) {
-	rotateEye(event, "eyeLeft");
-	rotateEye(event, "eyeRight");
-}
+function mouseMouve(event) { rotateEye(event, "eyeLeft"); rotateEye(event, "eyeRight"); }
 
 function rotateEye(event, eye) {
 	var xCurs = event.clientX;
