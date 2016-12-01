@@ -33,7 +33,23 @@ body {
 }
 
 #eyeLeft {
-  
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: -66px;
+    margin-left: -208px;
+}
+
+#eyeRight {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: -66px;
+    margin-left: 212px;
 }
 
 img.kill {

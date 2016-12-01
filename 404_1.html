@@ -1,4 +1,4 @@
-<html onmousemove="onclick_page(event);">
+<html onmousemove="mouseMouve(event);">
 
   <head>
     <title>404</title>
@@ -10,8 +10,9 @@
 
   <body id="container">
 
-    <div id="behind" onclick="reload()"><div>
-      <img src="img/eye.png" id="eyeLeft" style="height:50px;position:absolute;left:500px;top:100px">
+    <div id="behind"><div>
+      <img src="img/eye.png" id="eyeLeft">
+        <img src="img/eye.png" id="eyeRight">
 
     <img id="sun" onclick="toggleSun()" src="img/sun.png">
     <img id="number_left" onclick="killNumberLeft()" src="img/number/4.png">
