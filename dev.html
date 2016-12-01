@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test JS</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+      function toRadians (angle) {
+        return angle * (Math.PI / 180);
+      }
+      function onclick_page(event)
+      {
+
+        var xCurs = event.clientX;
+        var yCurs = event.clientY;
+        var image = document.getElementById("monImg");
+        var posx = $(image).position().left;
+        var posy = $(image).position().top;
+        var difX = Math.abs(xCurs - posx);
+        var difY = Math.abs(yCurs - posy);
+        var tanAngle = difX/difY;
+        //conversion rad
+        var angle = Math.atan(tanAngle)*180/Math.PI;
+        if (xCurs > posx){
+          angle = -angle;
+        }
+        image.style.transform = "rotate("+angle+"deg)";
+      }
+      </script>
+  </head>
+  <body onmousemove="onclick_page(event);">
+    <img src="se.png" id="monImg" style="height:50px;position:absolute;left:500px;top:100px">
+    <p id = "test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  </body>
+</html>
