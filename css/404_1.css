@@ -32,6 +32,10 @@ body {
     margin-left: 120px;
 }
 
+#eyeLeft {
+  
+}
+
 img.kill {
 animation: die 1s linear 0s forwards;
 }

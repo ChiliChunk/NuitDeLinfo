@@ -1,15 +1,17 @@
-<html>
+<html onmousemove="onclick_page(event);">
 
   <head>
     <title>404</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/404_1.css">
     <script src="js/404_1.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
   </head>
 
   <body id="container">
 
     <div id="behind" onclick="reload()"><div>
+      <img src="img/eye.png" id="eyeLeft" style="height:50px;position:absolute;left:500px;top:100px">
 
     <img id="sun" onclick="toggleSun()" src="img/sun.png">
     <img id="number_left" onclick="killNumberLeft()" src="img/number/4.png">
