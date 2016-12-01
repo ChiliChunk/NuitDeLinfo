@@ -2,9 +2,9 @@ body {
   background-image: url("../img/fond/sky.jpg");
 }
 
-img.number_left {
+#number_left {
     position: fixed;
-    top: 50%;
+    top: 70%;
     left: 50%;
     height: 350px;
     width: 180px;
@@ -12,20 +12,19 @@ img.number_left {
     margin-left: -300px;
 }
 
-img.number_middle {
+#number_middle {
     position: fixed;
-    top: 50%;
+    top: 70%;
     left: 50%;
-    height: 400px;
     height: 350px;
     width: 180px;
     margin-top: -175px;
     margin-left: -90px;
 }
 
-img.number_right {
+#number_right {
     position: fixed;
-    top: 50%;
+    top: 70%;
     left: 50%;
     height: 350px;
     width: 180px;
@@ -33,18 +32,27 @@ img.number_right {
     margin-left: 120px;
 }
 
-img.rotative {
-    position: fixed;
-    top: -17px;
+img.kill {
+animation: die 1s linear 0s forwards;
+}
+
+@keyframes die { from {  } to { top: 100%; margin-top: 400px; } }
+
+#sun {
+    position: absolute;
+    top: 10px;
     left: 30px;
+}
+
+img.move {
     -webkit-animation:spin 6s linear infinite;
     -moz-animation:spin 6s linear infinite;
-    animation:spin 6s linear infinite;
+    animation: animate 4s linear 0s infinite alternate;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes animate { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }; from { left: 30px; } to { left: 100%; margin-left: -280px; } }
 
 audio {
   visibility: hidden;

@@ -7,14 +7,16 @@
     <script src="js/404_1.js"></script>
   </head>
 
-  <body>
+  <body id="container">
 
-      <img class="rotative" onclick="playMusic()" src="img/sun.png">
-      <img class="number_left" src="img/number/4.png">
-      <img class="number_middle" src="img/number/0.png">
-      <img class="number_right" src="img/number/4.png">
+    <div id="behind" onclick="reload()"><div>
 
-      <audio id="music" loop controls><source src="son/boku_no_pico_1.mp3" type="audio/mp3">Impossible de lancer le fichier audio.</audio>
+    <img id="sun" onclick="toggleSun()" src="img/sun.png">
+    <img id="number_left" onclick="killNumberLeft()" src="img/number/4.png">
+    <img id="number_middle" onclick="killNumberMiddle()" src="img/number/0.png">
+    <img id="number_right" onclick="killNumberRight()" src="img/number/4.png">
+
+    <audio id="music" loop controls><source src="son/boku_no_pico_1.mp3" type="audio/mp3">Impossible de lancer le fichier audio.</audio>
 
   </body>
 
