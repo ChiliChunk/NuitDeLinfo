@@ -24,12 +24,16 @@
         if (xCurs > posx){
           angle = -angle;
         }
+        if (yCurs < posy){
+          angle = angle -180;
+          angle = -angle;
+        }
         image.style.transform = "rotate("+angle+"deg)";
       }
       </script>
   </head>
   <body onmousemove="onclick_page(event);">
-    <img src="se.png" id="monImg" style="height:50px;position:absolute;left:500px;top:100px">
+    <img src="img/eye.png" id="monImg" style="height:50px;position:absolute;left:500px;top:100px">
     <p id = "test">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <br>
     <br>
