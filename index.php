@@ -2,21 +2,21 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="./include/styles.css" />
+	<link rel="stylesheet" href="./styles.css" />
 	<title>Mon site !</title>
 </head>
 <body>
 	<?php 
 		// Index.php
-		include("./include/header.php"); 
+		include("./header.php"); 
 	?>
 	<div class="wrapper">
-		<?php include("./include/menus.php"); ?>
+		<?php include("./menus.php"); ?>
 		<section id="content">
 			<h2>Welcome</h2>
 			<p>Bienvenue sur mon site !</p>
 		</section>
 	</div>
-	<?php include("./include/footer.php"); ?>
+	<?php include("./footer.php"); ?>
 </body>
 </html>
