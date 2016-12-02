@@ -1,5 +1,0 @@
-<form action="connexion.php" method="post">
-				Login: <input type="text" name="log" value="" /></BR>
-				Mot de passe: <input type="password" name="pwd" value="" /></BR>
-				<input type="submit" name="connexion" value="Valider" />
-			</form>

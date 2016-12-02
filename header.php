@@ -1,3 +1,3 @@
 <header class="globalHeader" id="top">
-	<h1><a href="#">Site de Romain Mouchard</a></h1>
+	<h1><a href="#">Je te rembourse plus tard</a></h1>
 </header>

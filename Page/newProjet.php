@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<?php  require_once("../fonctions.php");
-      require_once("./connect.inc.php"); ?>
+<?php  
+	require_once("../fonctions.php");
+    require_once("./connect.inc.php"); 
+	  ?>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -14,9 +16,9 @@
     <input type="submit" name="confirm" />
   </form>
   <?php
-    if (!empty($_POST['text']) && isset($_POST['submit'])) {
-      CreerProjet($conn,$_POST['text']);
-      header('Location : /index.php');
+    if (!empty($_POST['nametext']) AND isset($_POST['nametext'])) {
+      CreerProjet($conn,$_POST['nametext']);
+      header('location:../index.php');
     }
 
    ?>

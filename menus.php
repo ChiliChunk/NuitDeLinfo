@@ -6,7 +6,7 @@
  <ul>
    <form action="index.php" method="POST">
 
- <?php
+	<?php
     afficherProjets($conn);
 	?>
   </form>
