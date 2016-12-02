@@ -8,6 +8,11 @@ function playMusic() {
 	}
 }
 
+function epilepsie(){
+	setTimeout(epilepsie, 1000);
+	document.getElementById("imageBG").classList.toggle("filtre");
+}
+
 function toggleSun() { document.getElementById("sun").classList.toggle("move"); makeItRain(); playMusic();}
 
 var nbLeft, nbMiddle,nbRight = false;
@@ -26,13 +31,34 @@ function areTheyDown() {
 
 function toRadians (angle) { return angle * (Math.PI / 180); }
 
-function mouseMouve(event) { rotateEye(event, "eyeLeft"); rotateEye(event, "eyeRight"); }
+function mouseMouve(event) { rotateEyeLeft(event); rotateEyeRight(event); }
 
-function rotateEye(event, eye) {
+function rotateEyeLeft(event) {
 	var xCurs = event.clientX;
-	var yCurs = event.clientY;
-	var image = document.getElementById(eye);
-	var posx = $(image).position().left;
+	var yCurs = event.clientY
+	var image = document.getElementById("eyeLeft");
+	var posx = $(image).position().left - 208;
+	var posy = $(image).position().top;
+	var difX = Math.abs(xCurs - posx);
+	var difY = Math.abs(yCurs - posy);
+	var tanAngle = difX/difY;
+	//conversion rad
+	var angle = Math.atan(tanAngle)*180/Math.PI;
+	if (xCurs > posx){
+		angle = -angle;
+	}
+	if (yCurs < posy){
+		angle = angle -180;
+		angle = -angle;
+	}
+	image.style.transform = "rotate("+angle+"deg)";
+}
+
+function rotateEyeRight(event) {
+	var xCurs = event.clientX;
+	var yCurs = event.clientY
+	var image = document.getElementById("eyeRight");
+	var posx = $(image).position().left +212;
 	var posy = $(image).position().top;
 	var difX = Math.abs(xCurs - posx);
 	var difY = Math.abs(yCurs - posy);

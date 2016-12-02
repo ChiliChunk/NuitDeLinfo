@@ -1,4 +1,4 @@
-<html onmousemove="mouseMouve(event)">
+<html onmousemove="mouseMouve(event)" >
 
   <head>
     <title>404</title>
@@ -8,18 +8,18 @@
     <script src="jquery-3.1.1.min.js"></script>
   </head>
 
-  <body id="container">
-
+  <body id="container" onload="epilepsie()">
+    <img id="imageBG" src="img/fond/mr.jpg" style="z-index:-1">
     <div id="behind"><div>
       <img src="img/eye.png" id="eyeLeft">
-        <img src="img/eye.png" id="eyeRight">
+      <img src="img/eye.png" id="eyeRight">
 
     <img id="sun" onclick="toggleSun()" src="img/sun.png">
     <img id="number_left" onclick="killNumberLeft()" src="img/number/4.png">
     <img id="number_middle" onclick="killNumberMiddle()" src="img/number/0.png">
     <img id="number_right" onclick="killNumberRight()" src="img/number/4.png">
 
-    <audio id="music" loop controls><source src="son/boku_no_pico_1.mp3" type="audio/mp3">Impossible de lancer le fichier audio.</audio>
+    <audio id="music" loop controls><source src="son/mlg2.mp3" type="audio/mp3">Impossible de lancer le fichier audio.</audio>
 
   </body>
 
